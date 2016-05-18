@@ -17,7 +17,7 @@ L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatialdev.map-c9z2cyef/{z}/{x}/{y}.
 
 var pbfSource = new L.TileLayer.MVTSource({
   url: "http://spatialserver.spatialdev.com/services/postgis/cicos_2014/geom/vector-tiles/{z}/{x}/{y}.pbf?fields=type,id",
-  debug: true,
+  debug: false,
   clickableLayers: null,
 
   getIDForLayerFeature: function(feature) {
@@ -75,7 +75,7 @@ var pbfSource = new L.TileLayer.MVTSource({
 
     function ScaleDependentPointRadius(zoom) {
       //Set point radius based on zoom
-      var pointRadius = 1;
+      var pointRadius = 2;
       if (zoom >= 0 && zoom <= 7) {
         pointRadius = 1;
       }
@@ -98,7 +98,7 @@ var pbfSource = new L.TileLayer.MVTSource({
         style.radius = ScaleDependentPointRadius;
         // selected
         style.selected = {
-          color: 'rgba(255,255,0,0.5)',
+          color: 'rgba(0,255,255,0.5)',
           radius: 6
         };
         break;
@@ -108,7 +108,7 @@ var pbfSource = new L.TileLayer.MVTSource({
         style.size = 3;
         // selected
         style.selected = {
-          color: 'rgba(255,255,0,0.5)',
+          color: 'rgba(0,255,255,0.5)',
           size: 6
         };
         break;
@@ -123,7 +123,7 @@ var pbfSource = new L.TileLayer.MVTSource({
         style.selected = {
           color: 'rgba(255,255,0,0.5)',
           outline: {
-            color: '#d9534f',
+            color: '#00ffff',
             size: 3
           }
         };
@@ -365,7 +365,7 @@ var CICO_LAYERS = {
 };
 var OffsiteATMs = {
   'Offsite ATMs': {
-    color: '#0000ff',
+    color: '#ff0000',
     infoLabel: 'Offsite ATM',
     providers: null,
     zIndex: 6
@@ -589,7 +589,7 @@ var styleCICO = function(feature) {
       style.radius = ScaleDependentPointRadius;
       // selected
       style.selected = {
-        color: 'rgba(255,255,0,0.5)',
+        color: 'rgba(0,255,255,0.5)',
         radius: 6
       };
       break;
@@ -599,7 +599,7 @@ var styleCICO = function(feature) {
       style.size = 3;
       // selected
       style.selected = {
-        color: 'rgba(255,255,0,0.5)',
+        color: 'rgba(0,255,255,0.5)',
         size: 6
       };
       break;
@@ -653,7 +653,7 @@ var style1904 = function(feature) {
       style.radius = ScaleDependentPointRadius;
       // selected
       style.selected = {
-        color: 'rgba(255,255,0,0.5)',
+        color: 'rgba(0,255,255,0.5)',
         radius: 6
       };
       break;
@@ -663,7 +663,7 @@ var style1904 = function(feature) {
       style.size = 3;
       // selected
       style.selected = {
-        color: 'rgba(255,255,0,0.5)',
+        color: 'rgba(0,255,255,0.5)',
         size: 6
       };
       break;
