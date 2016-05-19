@@ -35,7 +35,7 @@ Take a look at this [short presentation](https://speakerdeck.com/hallahan/leafle
 
 ## Demo Web Application
 
-This library is currently being used in the [India Edition of Financial Services for the Poor](http://fspmaps.com/india). 
+This library is currently being used in the [India Edition of Financial Services for the Poor](http://fspmaps.com/india).
 
 Tiles are being served by [SpatialServer (PGRestAPI)](https://github.com/spatialdev/PGRestAPI).
 
@@ -59,7 +59,7 @@ Open your browser to `http://localhost:3000/examples` and see the plugin in acti
 
 ## Usage
 
-To put Leaflet.MapboxVectorTile on your map, you create an `L.TileLayer.MVTSource` object. This is a subclass of L.TileLayer, and it's usage and methods work the same as other Leaflet Tile Layers. 
+To put Leaflet.MapboxVectorTile on your map, you create an `L.TileLayer.MVTSource` object. This is a subclass of L.TileLayer, and it's usage and methods work the same as other Leaflet Tile Layers.
 
 The primary way that you setup your vector tiles is through a configuration object that you send as a parameter to the constructor.
 
