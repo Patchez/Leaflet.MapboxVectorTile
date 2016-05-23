@@ -16,8 +16,8 @@ L.tileLayer('http://{s}.tiles.mapbox.com/v3/spatialdev.map-c9z2cyef/{z}/{x}/{y}.
 
 
 var pbfSource = new L.TileLayer.MVTSource({
-  url: "http://spatialserver.spatialdev.com/services/postgis/cicos_2014/geom/vector-tiles/{z}/{x}/{y}.pbf?fields=type,id",
-  debug: false,
+  url: "http://spatialserver.spatialdev.com/services/postgis/cicos_2014/geom/vector-tiles/{z}/{x}/{y}.pbf?fields=type,id,name,address",
+  debug: true,
   clickableLayers: null,
 
   getIDForLayerFeature: function(feature) {
@@ -143,7 +143,7 @@ var pbfSource = new L.TileLayer.MVTSource({
     var popup = L.popup();
     popup.setLatLng(evt.latlng);
     // popup.setContent(evt.feature.properties);
-    popup.setContent('<p> ID: ' + content.id + '<br /> Type: ' + content.type + '</p>')
+    popup.setContent('<p> ID: ' + content.id + '<br /> Name: ' + content.name + '<br /> Address: ' + content.address + '<br /> Type: ' + content.type + '</p>')
     popup.openOn(map);
   }
 
